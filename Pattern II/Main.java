@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+  int n,i,j,k=1;
+  std::cin>>n;
+  std::cout<<k<<"\n";
+  k++;
+  for(i=2;i<=n;i++)
+  {
+    if(i%2==0)
+    {
+      k=k+i-1;
+      for(j=0;j<i;j++)
+      {
+        if(j!=(i-1))
+        {
+          std::cout<<k<<"*";
+        }
+        else
+        {
+          std::cout<<k;
+        }
+        k--;
+      }
+      k=k+i+1;
+    }
+    else
+    {
+      for(j=0;j<i;j++)
+      {
+        if(j!=(i-1))
+        {
+          std::cout<<k<<"*";
+        }
+        else
+        {
+          std::cout<<k;
+        }
+        k++;
+      }
+   }
+    std::cout<<"\n";
+  }
+}
